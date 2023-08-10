@@ -135,7 +135,8 @@
         <script type="text/javascript">
 		window.addEventListener('beforeunload', function (e) {
 
-      Genesys("command", "MessagingService.clearSession");   
+      Genesys("command", "MessagingService.clearSession")
+	      Genesys("command", "MessagingService.clearConversation");   ;   
 
 		});
 		</script>
