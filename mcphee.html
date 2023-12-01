@@ -30,7 +30,8 @@
         Genesys("subscribe", "MessagingService.messagesReceived", function (o) {
             try {
                 if (o.data.messages[0].text === 'iFrame') {
-                    console.log('iFrame popup detected')
+                    console.log('iFrame popup detected') 
+                    window.location.href = 'https://www.semrush.com/blog/javascript-redirect/'
                     popIframe()
                 }
             } catch (err) {
