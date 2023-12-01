@@ -45,14 +45,7 @@
     deploymentId: '39902959-c3fc-47cf-9d25-b9fd8f17741f'
   });
 </script>
-	<script>
-		Genesys("subscribe", "Database.ready", function() {
-  console.log("Database plugin is ready.")
-});
-		Genesys("subscribe", "Database.updated", function(e){
-  		console.log('sup dude';
-			console.log(e.data)  // Updated database object
-});</script>
+
 </head>
 
 <body>
@@ -231,7 +224,14 @@
     <script src="js/main.js"></script>
 
         <!-- Genesys Messenger Script -->
-
+	<script>
+		Genesys("subscribe", "Database.ready", function() {
+  console.log("Database plugin is ready.")
+});
+		Genesys("subscribe", "Database.updated", function(e){
+  		console.log('sup dude';
+			console.log(e.data)  // Updated database object
+});</script>
 </body>
 
 </html>
