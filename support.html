@@ -76,6 +76,21 @@
   }
 );
 
+	Genesys("subscribe",  "Toaster.declined",
+  function (e) {
+    console.log("Toaster was declined", e);
+  }
+		Genesys("command", "Launcher.show",
+{},
+    function() {
+        /*fulfilled callback*/
+    },
+    function() {
+        /*rejected callback*/
+    }
+);
+);
+
 	
 	</script>
 </head>
