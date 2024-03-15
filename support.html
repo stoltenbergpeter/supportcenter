@@ -73,6 +73,7 @@
 	Genesys("subscribe",  "Toaster.accepted",
   function (e) {
     Genesys("command", "Messenger.open")
+	  Genesys("command", "MessagingService.startConversation")
   }
 );
 
