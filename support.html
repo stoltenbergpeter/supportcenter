@@ -77,19 +77,7 @@
   function () {
     /*fulfilled callback*/
     console.log("Toaster Accepted");
-	   Genesys(
-    'command',
-    'Messenger.open',
-    {},
-    () => {
-     /*fulfilled callback*/
-     console.log('Messenger opened');
-    },
-    (error) => {
-     /*rejected callback*/
-     console.log("Couldn't open messenger.", error);
-    }
-  );
+	
   },
   function (error) {
     /*rejected callback*/
