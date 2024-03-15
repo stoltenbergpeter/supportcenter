@@ -70,20 +70,13 @@
   );
 });
 
-	Genesys(
-  "command",
-  "Toaster.accept",
-  {},
-  function () {
-    /*fulfilled callback*/
-    console.log("Toaster Accepted");
-	
-  },
-  function (error) {
-    /*rejected callback*/
-    console.log("There was an error running the Toaster.accept command:", error);
+	Genesys("subscribe",  "Toaster.accepted",
+  function (e) {
+    Genesys("command", "Messenger.open")
   }
 );
+
+	
 	</script>
 </head>
 
